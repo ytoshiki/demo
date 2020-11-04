@@ -1,0 +1,12 @@
+- const commentData = { date : "11-03-2020", author : "Morgan.Codes", text : "coding is a life" };
+
+- const commentData2 = { date : "11-04-2020", author : "TCodes", text : "coding is fun" };
+
+mixin comment(commentData)
+  .comment
+    .date=commentData.date
+    .author=commentData.author
+    .text=commentData.text
+
++comment(commentData)
++comment(commentData2)

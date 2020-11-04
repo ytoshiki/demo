@@ -1,0 +1,61 @@
+- const myArrays = ["html", "css", "js"]
+- const loggedIn = false
+
+doctype html
+html
+  head
+    link(rel="stylesheet" href="./style.css")
+    style.
+      p{
+        color : white;
+        text-decoration: underline;
+      }
+  body
+    h1#pageTitle PUG!
+    p.pageParagraph Paragraph!
+    p.pageParagraph.
+      This is a paragraph tag 
+      and this is a new line
+    ul 
+     li This is line one.
+     li This is line two.
+    .displayblock
+    input(name="name" type="text" class="i-name" data-js=`${5 > 2 ? "OK" : "NO"}`)
+
+    - const myClasses = ["class", "class2", "class3"];
+    div.defaultClass(class = myClasses)
+
+    - const myStyles = {"color" : "red"}
+    - const myText = "I don't know what you mean."
+    div(style=myStyles)
+
+    h1=myText
+
+    - const myAttribute = {"src": "myPhoto.png"}
+    img&attributes(myAttribute)
+
+    each tech, i in myArrays
+      p(class = i + 1)=tech
+    
+    - const myObj = {"webdevelopment" : "S", "webdesign" : "C"}
+    - const user = "Toshiki"
+    ul
+      for grade, i in myObj
+        li=i + " " + grade
+      else 
+        strong No values are here!
+    if loggedIn
+      p 
+       strong=user 
+       | is logged in
+    else 
+      a(href="/login") Login
+    - const orderStatus = "Pending"
+    
+    case orderStatus
+      when 'Pending'
+        p Your order has been placed and will be sent shortly
+     
+    include includes/nav
+
+    include includes/comment

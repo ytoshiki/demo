@@ -1,0 +1,20 @@
+{
+  "name": "webpack-practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run": "webpack",
+    "pug": "pug -w ./src -o ./src/html -P"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "html-webpack-plugin": "^4.5.0",
+    "pug-cli": "^1.0.0-alpha6",
+    "webpack": "^5.3.2",
+    "webpack-cli": "^4.1.0"
+  }
+}
